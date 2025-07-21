@@ -1,6 +1,7 @@
 import sys 
 from enum import Enum
 from Requests import WeatherRequest
+from Calculator import Calculator
 
 class Choices(Enum):
 	CALCULATOR = '1'
@@ -47,7 +48,7 @@ class Hello:
 
 			match ask:
 				case Choices.CALCULATOR.name | Choices.CALCULATOR.value:
-					self.PrintStrWithWhiteSpaces("Not Implemented yet")
+					Calculator()
 					print("--")
 
 				case Choices.WEATHER.name | Choices.WEATHER.value:
