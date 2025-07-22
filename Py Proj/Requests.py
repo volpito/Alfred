@@ -3,7 +3,7 @@ from requests.auth import HTTPBasicAuth
 
 class WeatherRequest:
     def Get_posts(self):
-        self.city = input("What city do you want to know the weather of ?\n").strip().capitalize()
+        self.city = input("What city do you want to know the weather of ?\n-> ").strip().capitalize()
         key = 'c91d3fdea9f3478989a92153211810'
         url = 'http://api.weatherapi.com/v1'
         headers = {'Accept': 'application/json'}
@@ -28,7 +28,7 @@ class WeatherRequest:
 
         if posts:
             print(f"In {posts['location']['country']}, {posts['location']['name']}'s temp in C is :", posts['current']['temp_c'])
-            print('Should feel like :', posts['current']['feelslike_c'], "with", posts['current']['condition']['text'].casefold())
+            print('Should feel like :', posts['current']['feelslike_c'], "with", posts['current']['condition']['text'].casefold(), "skies.")
         else:
             print('Failed to fetch posts from API.\nCity name might be wrong')
 

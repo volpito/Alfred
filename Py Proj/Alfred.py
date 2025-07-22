@@ -26,7 +26,7 @@ class Hello:
 		count = 0
 
 		while not self.name and count != 3:
-			self.name = input("What's your name dear?\n").strip().capitalize()
+			self.name = input("What's your name dear?\n-> ").strip().capitalize()
 			count+=1
 
 		if len(self.name) == 1 or not self.name:
@@ -43,12 +43,12 @@ class Hello:
 			for choice in Choices:
 				print(choice.value, "-", choice.name)
 
-			ask = input().strip().upper()
+			ask = input("-> ").strip().upper()
 			print("--")
 
 			match ask:
 				case Choices.CALCULATOR.name | Choices.CALCULATOR.value:
-					Calculator()
+					Calculator().Equal()
 					print("--")
 
 				case Choices.WEATHER.name | Choices.WEATHER.value:
