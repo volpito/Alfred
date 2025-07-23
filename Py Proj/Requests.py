@@ -7,11 +7,11 @@ class WeatherRequest:
         key = 'c91d3fdea9f3478989a92153211810'
         url = 'http://api.weatherapi.com/v1'
         headers = {'Accept': 'application/json'}
-        auth = HTTPBasicAuth('apikey', key)
+        #auth = HTTPBasicAuth('apikey', key)
         #files = {'file': open('filename', 'rb')}
 
         try:
-            response = requests.get(f"{url}/current.json?key={key}&q={self.city}", headers=headers, auth=auth)#, files=files)
+            response = requests.get(f"{url}/current.json?key={key}&q={self.city}", headers=headers)#, auth=auth, files=files)
 
             if response.status_code == 200:
                 posts = response.json()

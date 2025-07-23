@@ -13,7 +13,8 @@ class Choices(Enum):
 class Hello:
 
 	def __init__(self, name=None):
-		self.name = name
+		self.name = name.capitalize()
+
 
 	def Run(self):
 		self.SayHi()
@@ -68,9 +69,10 @@ class Hello:
 		print(f'Have a nice day {self.name}')
 		return
 	
+	
 	def PrintStrWithWhiteSpaces(self, str):
 		print(f"\n{str}\n")
 
 
 if __name__ == '__main__' :
-	Hello().Run()
+	Hello(str(sys.argv[1])).Run()

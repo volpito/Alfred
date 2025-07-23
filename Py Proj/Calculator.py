@@ -9,14 +9,14 @@ class Calculator:
         
 
     def Equal(self):
-        print('Type "END" to exit calculus program')        
-        while "end" not in self.entry.casefold():
+        print('Type "EXIT" to exit calculus program')        
+        while "exit" not in self.entry.casefold():
             self.entry = input("-> ").strip()
             try:
                 res = str(eval(self.entry))
                 print(res)
             except:
-                if 'end' in self.entry.casefold():
+                if 'exit' in self.entry.casefold():
                     break
                 else:
                     tk.messagebox.showinfo("Error", "Syntax Error")
