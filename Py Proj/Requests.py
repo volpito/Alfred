@@ -28,7 +28,7 @@ class WeatherRequest:
 
         if posts:
             print(f"In {posts['location']['country']}, {posts['location']['name']}'s temp in C is :", posts['current']['temp_c'])
-            print('Should feel like :', posts['current']['feelslike_c'], "with", posts['current']['condition']['text'].casefold(), "skies.")
+            print('Should feel like :', posts['current']['feelslike_c'], "with", posts['current']['condition']['text'].casefold())
         else:
             print('Failed to fetch posts from API.\nCity name might be wrong')
 

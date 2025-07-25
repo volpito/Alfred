@@ -2,12 +2,15 @@ import sys
 from enum import Enum
 from Requests import WeatherRequest
 from Calculator import Calculator
+from wakepy import keep
+
 
 class Choices(Enum):
 	CALCULATOR = '1'
 	WEATHER = '2'
 	TODO = '3'
-	EXIT = '4'
+	WAKEPY = '4'
+	EXIT = '5'
 	
 
 class Hello:
@@ -60,6 +63,18 @@ class Hello:
 					self.PrintStrWithWhiteSpaces("Not Implemented yet")
 					print("--")
 
+				case Choices.WAKEPY.name | Choices.WAKEPY.value:
+					#check installation and add timer mode
+					with keep.presenting() as mode:
+						#https://wakepy.readthedocs.io/stable/user-guide.html
+						#print(mode.activation_result) #for detailed state check
+						isBack = False
+						while not isBack:
+							print(f"{self.name} is back : {isBack}")
+							isBack = bool(input())
+						print(f"{self.name} is back : {isBack}")
+					print("--")
+
 				case Choices.EXIT.name | Choices.EXIT.value:
 					endLoop = True
 				case _:
@@ -69,7 +84,7 @@ class Hello:
 		print(f'Have a nice day {self.name}')
 		return
 	
-	
+
 	def PrintStrWithWhiteSpaces(self, str):
 		print(f"\n{str}\n")
 
