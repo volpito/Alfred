@@ -23,6 +23,7 @@ class WeatherRequest:
             print('Error :', e)
             return None
 
+
     def Run(self):
         posts = self.Get_posts()
 
@@ -31,6 +32,7 @@ class WeatherRequest:
             print('Should feel like :', posts['current']['feelslike_c'], "with", posts['current']['condition']['text'].casefold())
         else:
             print('Failed to fetch posts from API.\nCity name might be wrong')
+
 
 if __name__ == '__main__':
     WeatherRequest().Run()

@@ -1,8 +1,8 @@
 import sys 
 from enum import Enum
-from Requests import WeatherRequest
+from Weather_API import WeatherRequest
+from WakePy_Repo import WakePy
 from Calculator import Calculator
-from wakepy import keep
 
 
 class Choices(Enum):
@@ -63,20 +63,13 @@ class Hello:
 					self.PrintStrWithWhiteSpaces("Not Implemented yet")
 					print("--")
 
-				case Choices.WAKEPY.name | Choices.WAKEPY.value:
-					#check installation and add timer mode
-					with keep.presenting() as mode:
-						#https://wakepy.readthedocs.io/stable/user-guide.html
-						#print(mode.activation_result) #for detailed state check
-						isBack = False
-						while not isBack:
-							print(f"{self.name} is back : {isBack}")
-							isBack = bool(input())
-						print(f"{self.name} is back : {isBack}")
+				case Choices.WAKEPY.name | Choices.WAKEPY.value:						
+					WakePy(self.name).Run()
 					print("--")
 
 				case Choices.EXIT.name | Choices.EXIT.value:
 					endLoop = True
+
 				case _:
 					self.PrintStrWithWhiteSpaces(f"No '{ask}' command was found :(\nStarting over !\n--")
 
