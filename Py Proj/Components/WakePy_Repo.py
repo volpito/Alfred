@@ -29,8 +29,15 @@ class WakePy:
             while not isBack:
                 if timeInMin != 0:
                     print(f"Presenting mode enabled for {timeInMin} min.")
-                    time.sleep(timeInMin * 60)
-                    timeInMin = 0
+#                    time.sleep(timeInMin * 60)
+                    for remaining in range(timeInMin * 60, 0, -1):
+                        sys.stdout.write("\r")
+                        sys.stdout.write("{:2d} seconds remaining.".format(remaining)) 
+                        sys.stdout.flush()
+                        time.sleep(1)
+                                            
+                    sys.stdout.flush()
+                    sys.stdout.write("\r")
                     isBack = True
                 else:
                     print(f"{self.name} is AFK.\nPresenting mode engaged unil new input.")

@@ -1,8 +1,8 @@
 import sys 
 from enum import Enum
-from Weather_API import WeatherRequest
-from WakePy_Repo import WakePy
-from Calculator import Calculator
+from Components.Weather_API import WeatherRequest
+from Components.WakePy_Repo import WakePy
+from Components.Calculator import Calculator
 
 
 class Choices(Enum):
