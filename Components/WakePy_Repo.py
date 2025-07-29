@@ -43,7 +43,7 @@ class WakePy:
                     print(f"{self.name} is AFK.\nPresenting mode engaged unil new input.")
                     isBack = bool(input())
             
-            print(f"Welcome back {self.name} :)")
+            print(f"Welcome back {self.name} :)") 
                                           
 
 if __name__ == '__main__':
