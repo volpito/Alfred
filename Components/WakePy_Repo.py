@@ -29,7 +29,7 @@ class WakePy:
             while not isBack:
                 if timeInMin != 0:
                     print(f"Presenting mode enabled for {timeInMin} min.")
-#                    time.sleep(timeInMin * 60)
+
                     for remaining in range(timeInMin * 60, 0, -1):
                         sys.stdout.write("\r")
                         sys.stdout.write("{:2d} seconds remaining.".format(remaining)) 

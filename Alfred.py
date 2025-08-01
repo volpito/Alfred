@@ -3,13 +3,15 @@ from enum import Enum
 from Components.Weather_API import WeatherRequest
 from Components.WakePy_Repo import WakePy
 from Components.Calculator import Calculator
+from Components.Pomodoro import Pomodoro
 
 
 class Choices(Enum):
-	CALCULATOR = '1'
-	WEATHER = '2'
-	TODO = '3'
-	WAKEPY = '4'
+	WAKEPY = '1'
+	POMODORO = '2'
+	WEATHER = '3'
+	CALCULATOR = '4'
+		
 	EXIT = '5'
 	
 
@@ -59,8 +61,8 @@ class Hello:
 					WeatherRequest().Run()
 					print("--")
 
-				case Choices.TODO.name | Choices.TODO.value:
-					self.PrintStrWithWhiteSpaces("Not Implemented yet")
+				case Choices.POMODORO.name | Choices.POMODORO.value:
+					Pomodoro().Run()
 					print("--")
 
 				case Choices.WAKEPY.name | Choices.WAKEPY.value:						
