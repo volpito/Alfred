@@ -6,3 +6,6 @@ Then git clone it to your machine,
 
 Open your console in the project directory and run :
 >> python Alfred.py YourName (optionnal)
+
+
+Please, .gitignore the todoList.json to keep the repo clean <3
