@@ -7,12 +7,12 @@ from Components.Pomodoro import Pomodoro
 
 
 class Choices(Enum):
+	EXIT = '0'
 	WAKEPY = '1'
 	POMODORO = '2'
 	WEATHER = '3'
 	CALCULATOR = '4'
 		
-	EXIT = '5'
 	
 
 class Hello:
