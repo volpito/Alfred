@@ -85,4 +85,4 @@ class Hello:
 
 
 if __name__ == '__main__' :
-	Hello(str(sys.argv[1])).Run()
+	Hello(str(sys.argv[1] if len(sys.argv) > 1 else "")).Run()

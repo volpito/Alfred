@@ -1,6 +1,6 @@
-import time
-import subprocess
 import sys
+import subprocess
+from Helpers import TimeHelpers
 
 try:
     from wakepy import keep
@@ -29,15 +29,7 @@ class WakePy:
             while not isBack:
                 if timeInMin != 0:
                     print(f"Presenting mode enabled for {timeInMin} min.")
-
-                    for remaining in range(timeInMin * 60, 0, -1):
-                        sys.stdout.write("\r")
-                        sys.stdout.write("{:2d} seconds remaining.".format(remaining)) 
-                        sys.stdout.flush()
-                        time.sleep(1)
-                                            
-                    sys.stdout.flush()
-                    sys.stdout.write("\r")
+                    TimeHelpers.CountDown(timeInMin)
                     isBack = True
                 else:
                     print(f"{self.name} is AFK.\nPresenting mode engaged unil new input.")

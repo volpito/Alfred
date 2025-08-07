@@ -1,5 +1,4 @@
 [
-    "remonter des heures via my-learnings avec l'auto-d\u00e9clar\u00e9 (ppt slide 10)",
-    "move time codes to helper",
-    "fix Argv[1] empty case"
+    "pop up on pauses triggered",
+    "trigger pauses"
 ]
