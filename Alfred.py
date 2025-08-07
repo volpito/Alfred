@@ -15,7 +15,7 @@ class Choices(Enum):
 		
 	
 
-class Hello:
+class Run:
 
 	def __init__(self, name=None):
 		self.name = name.capitalize()
@@ -24,7 +24,6 @@ class Hello:
 	def Run(self):
 		self.SayHi()
 		self.UserChoice()
-
 
 
 	def SayHi(self): 
@@ -75,7 +74,6 @@ class Hello:
 				case _:
 					self.PrintStrWithWhiteSpaces(f"No '{ask}' command was found :(\nStarting over !\n--")
 
-
 		print(f'Have a nice day {self.name}')
 		return
 	
@@ -85,4 +83,4 @@ class Hello:
 
 
 if __name__ == '__main__' :
-	Hello(str(sys.argv[1] if len(sys.argv) > 1 else "")).Run()
+	Run(str(sys.argv[1] if len(sys.argv) > 1 else "")).Run()
