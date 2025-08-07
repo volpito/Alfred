@@ -1,3 +1,4 @@
+import os
 import json
 import time
 from Helpers.TimeHelpers import TimeHelpers
@@ -7,16 +8,22 @@ class Pomodoro:
     def __init__(self):
         self.jsonPath = "Components/todoList.json"
 
-    
+
     def Read(self):
-        with open(self.jsonPath, "r") as f:
-            self.Tasks = json.load(f)
+        if os.path.exists(self.jsonPath):
+            with open(self.jsonPath, "r") as f:
+                self.Tasks = json.load(f)
+        else:
+            self.Tasks = []
 
 
     def Write(self):
+        os.makedirs(os.path.dirname(self.jsonPath), exist_ok=True)
+
         json_str = json.dumps(self.Tasks, indent=4)
         with open(self.jsonPath, "w") as f:
             f.write(json_str)
+
 
 
     def AddTask(self):
