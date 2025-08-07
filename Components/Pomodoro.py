@@ -6,7 +6,6 @@ from Helpers.TimeHelpers import TimeHelpers
 class Pomodoro:
     def __init__(self):
         self.jsonPath = "Components/todoList.json"
-        #self.flowModoro = False
 
     
     def Read(self):
@@ -55,9 +54,11 @@ class Pomodoro:
             
             while not endLoop:
                 try:
-                    print("Here are your remaining task(s) :")
-                    for idTask, task in enumerate(self.Tasks):
-                        print(idTask, '-', task)
+                    if self.Tasks: 
+                        print("Here are your remaining task(s) :")
+                        for idTask, task in enumerate(self.Tasks):
+                            print(idTask, '-', task)
+
                     chosenID = input("\nWhat would you like to do ? (enter a number, NEW, CLEAR or EXIT)\n-> ").strip().casefold()
                     chosen = self.Tasks[int(chosenID)]
                     if chosen :
