@@ -58,7 +58,7 @@ class Pomodoro:
                     print("Here are your remaining task(s) :")
                     for idTask, task in enumerate(self.Tasks):
                         print(idTask, '-', task)
-                    chosenID = input("What would you like to do ? (enter a number, NEW, CLEAR or EXIT)\n-> ").strip().casefold()
+                    chosenID = input("\nWhat would you like to do ? (enter a number, NEW, CLEAR or EXIT)\n-> ").strip().casefold()
                     chosen = self.Tasks[int(chosenID)]
                     if chosen :
                         print(chosen)
@@ -72,7 +72,7 @@ class Pomodoro:
                             self.Tasks.remove(chosen)
                             self.Write()
 
-                except Exception as e :
+                except Exception as e:
                     match chosenID:
                         case "new":
                             self.AddTask()
@@ -81,12 +81,9 @@ class Pomodoro:
                         case "exit":
                             endLoop = chosenID == "exit"
                         case _:
-                            print(f"'{chosenID}' is not a valid entry... Try again\n") 
+                            print(f"Error : {e}\n") 
 
         print('Going back to main Menu...\n')
-        print("--")
-
-                
 
 
 if __name__ == '__main__':
