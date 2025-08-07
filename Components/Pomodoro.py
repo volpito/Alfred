@@ -7,6 +7,7 @@ from Helpers.TimeHelpers import TimeHelpers
 class Pomodoro:
     def __init__(self):
         self.jsonPath = "Components/todoList.json"
+        self.Tasks = []
 
 
     def Read(self):
