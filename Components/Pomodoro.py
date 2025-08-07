@@ -38,7 +38,7 @@ class Pomodoro:
 
     def StopWatch(self):
         startTime = time.time()
-        TimeHelpers().CountUp(25, 4, startTime)
+        TimeHelpers().CountUp(1, 4, startTime)
         
 
     def Run(self):
