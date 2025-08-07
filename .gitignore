@@ -1,2 +1,2 @@
 # Ignore JSON files
-todoList.json
+*.json
