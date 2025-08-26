@@ -6,6 +6,7 @@ class TimeHelpers:
 
     def ElapsedPause(self, pauseTimeInMins, pauseStart):
         self.CountDown(pauseTimeInMins)
+        GenericHelpers().Mbox("Pomodoro", "Time to get back to work champ' !", 0)
         return time.time() - pauseStart
 
 
@@ -24,9 +25,9 @@ class TimeHelpers:
                 time.sleep(1)
 
                 if iterations:
-                    if (hours and hours % hourIntervals == 0) or (mins and mins % minIntervals == 0) or secs == 0:
+                    if (hours and hours % hourIntervals == 0) or (mins and mins % minIntervals == 0) and secs == 0:
                         pauseStart = time.time()
-                        if GenericHelpers().Mbox('Pomodoro', f'It has been {f"{hours:02}h and "if hours else ""}{hours:02}h and {mins:02}min. Pause ?', 4) == 6:
+                        if GenericHelpers().Mbox('Pomodoro', f'It has been {intervalInMins}mn since the last break.\nPause ?', 4) == 6:
                             startTime = startTime + self.ElapsedPause(5, pauseStart)
                         else:
                             startTime = startTime + self.ElapsedPause(0, pauseStart)
@@ -34,7 +35,7 @@ class TimeHelpers:
                 
                 else:
                     pauseStart = time.time()
-                    GenericHelpers().Mbox('Pomodoro', f"It has been {f"{hours:02}h and "if hours else ""}{mins:02}min.\nHave a break !", 0)
+                    GenericHelpers().Mbox('Pomodoro', f"It has been {f"{hours:02}h and "if hours else ""}{mins:02}mn.\nHave a 20mn break.", 0)
                     startTime = startTime + self.ElapsedPause(20, pauseStart)                    
                     endLoop = True
 
@@ -56,8 +57,9 @@ class TimeHelpers:
         except KeyboardInterrupt:
             print("\nStopwatch stopped.")
 
-        sys.stdout.flush()
         sys.stdout.write("\r")
+        sys.stdout.flush()
+        
 
 
 '''if __name__ == "__main__":
