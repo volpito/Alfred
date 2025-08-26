@@ -45,7 +45,7 @@ class Pomodoro:
 
     def StopWatch(self):
         startTime = time.time()
-        TimeHelpers().CountUp(1, 4, startTime)
+        TimeHelpers().CountUp(25, 4, startTime)
         
 
     def Run(self):
@@ -80,6 +80,9 @@ class Pomodoro:
                         if input('Would you like to remove this task from your list ? y|n \n-> ').strip().casefold() == 'y':
                             self.Tasks.remove(chosen)
                             self.Write()
+                            
+                except KeyboardInterrupt:
+                    print("\nStopwatch stopped.")
 
                 except Exception as e:
                     match chosenID:
