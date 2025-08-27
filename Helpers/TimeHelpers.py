@@ -53,6 +53,7 @@ class TimeHelpers:
                     sys.stdout.write("{:2d} mins remaining. Press Ctrl + C to interrupt countdown.".format(int(remaining / 60))) 
                     sys.stdout.flush()
                     time.sleep(1)
+                print("\n")
 
         except KeyboardInterrupt:
             print("\nStopwatch stopped.")
@@ -60,6 +61,7 @@ class TimeHelpers:
         sys.stdout.write("\r")
         sys.stdout.flush()
         
+
 
 
 '''if __name__ == "__main__":
