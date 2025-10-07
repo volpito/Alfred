@@ -11,7 +11,7 @@ python -m pip install -r requirements.txt
 ```
 On your work station, if your company uses a proxy, please run : 
 ```
-pip install -r requirements.txt --proxy http://user:password@proxy.company.com:port
+python -m pip install -r requirements.txt --proxy http://user:password@proxy.company.com:port
 ```
 ### 2. LAUNCH :
 Open your console in the project directory and run:
