@@ -21,8 +21,8 @@ Open your console in the project directory and run:
 
 At launch, you will get several options to choose from. To activate them, you can type in the designated number OR the name of the option.
 
->> 0 - EXIT => self explanatory
->> 1 - WAKEPY => keep your computer active and prevent sleep mode (does nothing for your teams status)
->> 2 - POMODORO => to-do list and 5mn breaks suggested every 25 minutes
->> 3 - WEATHER => worldwide weather API (will need a proxy set up on a work station)
->> 4 - CALCULATOR => complex calculations such as "(2*2) - 24 / 3" are viable
+> 0 - EXIT => self explanatory
+> 1 - WAKEPY => keep your computer active and prevent sleep mode (does nothing for your teams status)
+> 2 - POMODORO => to-do list and 5mn breaks suggested every 25 minutes
+> 3 - WEATHER => worldwide weather API (will need a proxy set up on a work station)
+> 4 - CALCULATOR => complex calculations such as "(2*2) - 24 / 3" are viable
