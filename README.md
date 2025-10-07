@@ -16,9 +16,12 @@ Open your console in the project directory and run:
 python Alfred.py YourName (optionnal)
 ```
 ### 3_ALFRED : 
-At launch, you will get several options to choose from. To activate them, you can type in the designated number OR the name of the option.\\
-0_EXIT => self explanatory\
-1_WAKEPY => keep your computer active and prevent sleep mode (does nothing for your teams status)\
-2_POMODORO => to-do list and 5mn breaks suggested every 25 minutes\
-3_WEATHER => worldwide weather API (will need a proxy set up on a work station)\
-4_CALCULATOR => complex calculations such as "(2*2) - 24 / 3" are viable\
+At launch, you will get several options to choose from. To activate them, you can type in the designated number OR the name of the option.\
+```
+0_EXIT => self explanatory
+1_WAKEPY => keep your computer active and prevent sleep mode (does nothing for your teams status)
+2_POMODORO => to-do list and 5mn breaks suggested every 25 minutes
+3_WEATHER => worldwide weather API (will need a proxy set up on a work station)
+4_CALCULATOR => complex calculations such as "(2*2) - 24 / 3" are viable
+```
+
