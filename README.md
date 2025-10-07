@@ -29,3 +29,4 @@ At launch, you will get several options to choose from. To activate them, you ca
 
 ### Happy coding !
 ![White duck wearing a hat and dancing](https://github.com/volpito/Alfred/blob/master/duck-dance-2383412861.gif)
+Made with love by [MPJ Rigot](https://mpjrigot.fr/)
