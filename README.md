@@ -26,5 +26,5 @@ At launch, you will get several options to choose from. To activate them, you ca
 3_WEATHER => worldwide weather API (will need a proxy set up on a work station)
 4_CALCULATOR => complex calculations such as "(2*2) - 24 / 3" are viable
 ```
-Happy coding !\
+### Happy coding !
 ![White duck wearing a hat and dancing](https://github.com/volpito/Alfred/blob/master/duck-dance-2383412861.gif)
