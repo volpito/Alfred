@@ -26,3 +26,4 @@ At launch, you will get several options to choose from. To activate them, you ca
 4_CALCULATOR => complex calculations such as "(2*2) - 24 / 3" are viable
 ```
 
+![Happy coding !](https://myoctocat.com/assets/images/base-octocat.svg](https://tenor.com/view/duck-dance-4k-gif-21310774)
