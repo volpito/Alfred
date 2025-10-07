@@ -1,8 +1,9 @@
 # Alfred 1.0
-Alfred is a friendly text-based bot that will help you during your work hours, or to properly organize and manage your tasks\
+Alfred is a friendly text-based bot that will help you during your work hours, or to properly organize and manage your tasks.\
 It runs on PC only for now.\
 To run it, you must first install [Python 3.13](https://www.python.org/downloads/)\
-Then git clone / unzip it to your machine\
+Then git clone / unzip it to your machine
+
 ### 1. INSTALLING PACKAGES :
 On your personal computer, from Alfred's directory, please run :
 ```
