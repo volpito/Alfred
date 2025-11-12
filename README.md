@@ -1,4 +1,5 @@
-# Alfred 1.0
+# Alfred 1.0.19
+
 Alfred is a multi-purpose bot that will help you in your daily tasks.\
 It runs on PC only for now.\
 To run it, you must first install [Python 3.13](https://www.python.org/downloads/)\
