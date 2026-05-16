@@ -1,14 +1,14 @@
 import sys 
 from enum import Enum
 from Components.Weather_API import WeatherRequest
-#from Components.WakePy_Repo import WakePy
+from Components.WakePy_Repo import ScreenTest
 from Components.Calculator import Calculator
 from Components.Pomodoro import Pomodoro
 
 
 class Choices(Enum):
 	EXIT = '0'
-	WAKEPY = '1'
+	ScreenTest = '1'
 	POMODORO = '2'
 	WEATHER = '3'
 	CALCULATOR = '4'
@@ -64,9 +64,9 @@ class Run:
 					Pomodoro().Run()
 					print("--")
 
-				#case Choices.WAKEPY.name | Choices.WAKEPY.value:						
-					#WakePy(self.name).Run()
-					#print("--")
+				case Choices.ScreenTest.name | Choices.ScreenTest.value:						
+					ScreenTest(self.name).Run()
+					print("--")
 
 				case Choices.EXIT.name | Choices.EXIT.value:
 					endLoop = True
