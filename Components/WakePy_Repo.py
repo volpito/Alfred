@@ -1,42 +1,18 @@
-import sys
-import subprocess
-from Helpers import TimeHelpers
-
-try:
-    from wakepy import keep
-except ImportError:
-    print("WakePy not found. Installing...")
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "wakepy"])
-    from wakepy import keep
-
-    print("WakePy installed successfully.")
-
-
-class WakePy:
-    def __init__(self, name):
-        self.name = name
-        
-
-    def Run(self):
-        with keep.presenting() as mode:
-            #https://wakepy.readthedocs.io/stable/user-guide.html
-            #print(mode.activation_result) #for detailed state check
-            isBack = False
-
-            try: timeInMin = int(input("Choose a number of minutes and/or press enter.\n-> ").strip())
-            except: timeInMin = 0
-
-            while not isBack:
-                if timeInMin != 0:
-                    print(f"Presenting mode enabled for {timeInMin} min.")
-                    TimeHelpers.CountDown(timeInMin)
-                    isBack = True
-                else:
-                    print(f"{self.name} is AFK.\nPresenting mode engaged unil new input.")
-                    isBack = bool(input())
-            
-            print(f"Welcome back {self.name} :)") 
-                                          
-
-if __name__ == '__main__':
-    WakePy().Run()
+import time
+from PIL import Image, ImageDraw, ImageFont
+from waveshare_epd import epd2in13_V4
+# 1. Setup
+epd = epd2in13_V4.EPD()
+epd.init()
+epd.Clear()
+# 2. Create Image (using e-paper dimensions)
+image = Image.new('1', (epd.width, epd.height), 255) #255 = white background
+draw = ImageDraw.Draw(image)
+font = ImageFont.load_default()
+# 3. Draw directly
+draw.text((10, 10), 'Hello Boss', font=font, fill=0)
+# 4. Push to screen
+epd.display(epd.getbuffer(image))
+# 5. Cleanup
+time.sleep(2)
+epd.sleep()
