@@ -1,7 +1,7 @@
 import sys 
 from enum import Enum
 from Components.Weather_API import WeatherRequest
-from Components.WakePy_Repo import ScreenTest
+from Components.ScreenTest import ScreenTest
 from Components.Calculator import Calculator
 from Components.Pomodoro import Pomodoro
 
