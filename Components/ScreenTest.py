@@ -5,9 +5,17 @@ from waveshare_epd import epd2in13_V4
 class ScreenTest:
 
   def __init__(self, name):
-        self.name = name
+    self.name = name
     
   def Run(self):
+    print('Testing in 3...\n')
+    time.sleep(2)
+    print('Testing in 2...\n')
+    time.sleep(2)
+    print('Testing in 1...\n')
+    time.sleep(2)
+
+    print('GOOGOGO')
     # 1. Setup
     epd = epd2in13_V4.EPD()
     epd.init()
@@ -21,8 +29,10 @@ class ScreenTest:
     # 4. Push to screen
     epd.display(epd.getbuffer(image))
     # 5. Cleanup
-    time.sleep(2)
+    time.sleep(20)
     epd.sleep()
+    print('Test Done\n')
+
 
 if __name__ == '__main__':
     ScreenTest().Run()
